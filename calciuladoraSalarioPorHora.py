@@ -1,0 +1,5 @@
+numero_funcionario=int(input("Digite o número do funcionário: "))
+horas_trabalhadas=int(input("Digite a quantidade de horas trabalhadas: "))
+valor_por_hora=float(input("digite o valor recebido por hora(separe com .): "))
+print(f"Número do funcionário : {numero_funcionario}")
+print(f"Salário calculado : R$ {valor_por_hora*horas_trabalhadas:.2f}")
