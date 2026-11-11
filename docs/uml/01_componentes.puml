@@ -1,0 +1,19 @@
+@startuml
+title Atividade2-EdN — módulos independentes
+actor "Aluno / terminal" as T
+component "calciuladoraSalarioPorHora.py" as P0
+T --> P0 : python calciuladoraSalarioPorHora.py
+component "calculadoraConsumoCombustivel.py" as P1
+T --> P1 : python calculadoraConsumoCombustivel.py
+component "calculadoraDesconto.py" as P2
+T --> P2 : python calculadoraDesconto.py
+component "calculadoraMediaEscolar.py" as P3
+T --> P3 : python calculadoraMediaEscolar.py
+component "calculadoraSomaComEntradaUsuario.py" as P4
+T --> P4 : python calculadoraSomaComEntradaUsuario.py
+component "conversorDeMoeda.py" as P5
+T --> P5 : python conversorDeMoeda.py
+note bottom
+Sem aplicação única, banco ou APIs compartilhadas.
+end note
+@enduml

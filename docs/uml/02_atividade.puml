@@ -1,0 +1,10 @@
+@startuml
+title calciuladoraSalarioPorHora.py: atividade
+start
+:Ler número de funcionário;
+:Ler horas como int;
+:Ler valor por hora como float;
+:Calcular horas × valor/hora;
+:Imprimir salário em R$ com 2 casas;
+stop
+@enduml
