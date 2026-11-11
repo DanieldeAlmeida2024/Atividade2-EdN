@@ -119,3 +119,7 @@ Saída:
 
 
 Imprima o número do funcionário e o salário calculado com duas casas decimais. Deve haver um espaço em branco antes e depois do sinal de igualdade, e no caso do salário, também um espaço em branco após o R$
+
+## Documentação específica (v1.0.0)
+
+[Especificação](docs/projeto/ESPECIFICACAO.md) · [Diagramas](docs/uml/README.md) · [Plano de testes](docs/testes/PLANO_DE_TESTES.md) · [Versões](docs/controle/VERSIONAMENTO.md)
