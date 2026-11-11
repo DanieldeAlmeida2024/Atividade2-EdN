@@ -1,3 +1,31 @@
+# Atividade2-EdN — atividades Python
+
+Exercícios Python de aritmética aplicada: conversão de moeda, desconto, médias, consumo e salário.
+
+## Requisitos
+Python 3.10+ e terminal local; não há serviço HTTP ou banco de dados obrigatório nesta atividade.
+
+## Executar
+```bash
+python conversorDeMoeda.py
+```
+
+Cada script é um exercício independente. Outros arquivos existentes: `conversorDeMoeda.py, calculadoraDesconto.py, calculadoraMediaEscolar.py, calculadoraConsumoCombustivel.py, calciuladoraSalarioPorHora.py`.
+
+## Testes
+```bash
+python -m unittest discover -s tests -v
+```
+
+Os testes adicionados verificam presença de arquivos, documentação e sintaxe de código; para validar comportamento, é necessário comparar a entrada e saída de cada exercício com o enunciado original.
+
+## Documentação
+[Requisitos](docs/REQUISITOS.md) · [Arquitetura](docs/ARQUITETURA.md) · [UML](docs/UML.puml) · [Plano de testes](docs/PLANO_TESTES.md) · [Guia de IA](AGENTS.md).
+
+---
+
+## Enunciados anteriores preservados
+
 ## Atividade Prática 02
 ### 1- Conversor de Moeda 
 

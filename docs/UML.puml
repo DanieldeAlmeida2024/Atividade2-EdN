@@ -1,0 +1,8 @@
+@startuml
+title Atividade2-EdN - interacao dos exercicios
+actor Aluno
+component "Script Python" as Script
+component "Entrada e saida" as IO
+Aluno --> Script
+Script --> IO
+@enduml
