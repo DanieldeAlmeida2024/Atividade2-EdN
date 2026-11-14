@@ -11,3 +11,7 @@ Versão **1.0.0**, 11/11/2026. Código analisado: `ecde9d5c162a66cb80e4581856d7d
 | Atividade2-EdN-TEST | [Plano de testes](../testes/PLANO_DE_TESTES.md) | 1.0.0 |
 
 **MAJOR** quando mudar entrada/saída de programa; **MINOR** para exercícios/funcionalidades novos; **PATCH** para correção editorial. Atualize IDs de testes quando alterar regras.
+
+## Reconciliação documental de 14/11/2026
+
+Recuperada modelagem específica de cada script e UML, com indicação explícita de que a revisão anterior é histórica. Preservados código, fixtures e testes já aprovados da main. O CI vigente, e não a matriz histórica, comprova execução.
