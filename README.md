@@ -131,3 +131,9 @@ Saída:
 
 
 Imprima o número do funcionário e o salário calculado com duas casas decimais. Deve haver um espaço em branco antes e depois do sinal de igualdade, e no caso do salário, também um espaço em branco após o R$
+
+## Documentação específica da atividade
+
+[Especificação dos scripts](docs/projeto/ESPECIFICACAO.md) · [Casos de teste históricos](docs/testes/PLANO_DE_TESTES.md) · [UML do exercício](docs/uml/README.md) · [Histórico](docs/controle/VERSIONAMENTO.md).
+
+Os documentos de modelagem referenciam a revisão original. Os testes automatizados atuais e suas limitações constam no plano vigente e nas execuções do GitHub Actions.
