@@ -17,11 +17,11 @@ Cada script é um exercício independente. Outros arquivos existentes: `converso
 python -m unittest discover -s tests -v
 ```
 
-Os testes adicionados verificam presença de arquivos, documentação e sintaxe de código; para validar comportamento, é necessário comparar a entrada e saída de cada exercício com o enunciado original.
+A suíte executa os exercícios como programas e valida cálculos e tratamento de entradas, além de conferir a documentação e a estrutura do repositório.
 
-## Correções funcionais e resultados verificáveis
+## Cálculos e regras verificadas
 
-Os cinco exercícios agora possuem funções reutilizáveis e testes automatizados de saída e validação:
+Os exercícios possuem funções reutilizáveis e testes automatizados de saída e validação:
 
 - **Câmbio:** como a cotação é em **reais por 1 unidade estrangeira**, a conversão correta divide `R$ 100 / R$ 5,60` e `R$ 100 / R$ 6,60`. Resultados esperados: **US$ 17,86 e € 15,15**. São taxas fixas do enunciado, não cotações atuais.
 - **Desconto:** verifica limites de 0 a 100%; R$ 50 com 20% resulta em R$ 40.
@@ -36,7 +36,7 @@ Para reproduzir: `python -m unittest discover -s tests -p 'test_*.py' -v`. O CI 
 
 ---
 
-## Enunciados anteriores preservados
+## Enunciados dos exercícios
 
 ## Atividade Prática 02
 ### 1- Conversor de Moeda 
