@@ -54,6 +54,35 @@ class TestesAtividade02(unittest.TestCase):
         with self.assertRaises(ValueError):
             salario.calcular_salario(-1, 20)
 
+    def test_booleanos_nao_sao_quantidades_numericas(self):
+        casos = (
+            lambda: moeda.converter_reais(True, 5.6),
+            lambda: moeda.converter_reais(100, True),
+            lambda: desconto.calcular_desconto(True, 15),
+            lambda: desconto.calcular_desconto(100, False),
+            lambda: consumo.calcular_consumo(True, 10),
+            lambda: consumo.calcular_consumo(100, True),
+            lambda: salario.calcular_salario(True, 10),
+            lambda: salario.calcular_salario(10, False),
+            lambda: media.calcular_media([10, True]),
+        )
+        for executar in casos:
+            with self.subTest(operacao=executar), self.assertRaises(ValueError):
+                executar()
+
+    def test_estouro_numerico_nao_devolve_infinito(self):
+        casos = (
+            lambda: moeda.converter_reais(1e308, 1e-308),
+            lambda: desconto.calcular_desconto(1e308, 1e308),
+            lambda: consumo.calcular_consumo(1e308, 1e-308),
+            lambda: salario.calcular_salario(1e308, 1e308),
+            lambda: media.calcular_media([1e308, 1e308]),
+            lambda: moeda.converter_reais(10 ** 1000, 10),
+        )
+        for executar in casos:
+            with self.subTest(operacao=executar), self.assertRaises(ValueError):
+                executar()
+
     def test_cli_cambio_mostra_dolares_e_euros(self):
         p = subprocess.run([sys.executable, str(ROOT / "conversorDeMoeda.py")],
                            capture_output=True, text=True, timeout=10)
