@@ -1,12 +1,12 @@
 """Conversão de BRL para moedas cotadas em reais por unidade."""
-import math
+from numeros import numero_finito, resultado_finito
 
 def converter_reais(valor_brl: float, reais_por_unidade: float) -> float:
-    if not all(isinstance(x, (int, float)) and math.isfinite(x) for x in (valor_brl, reais_por_unidade)):
+    if not all(numero_finito(x) for x in (valor_brl, reais_por_unidade)):
         raise ValueError("Valor e taxa devem ser números finitos.")
     if valor_brl < 0 or reais_por_unidade <= 0:
         raise ValueError("Valor não pode ser negativo e taxa deve ser positiva.")
-    return valor_brl / reais_por_unidade
+    return resultado_finito(valor_brl / reais_por_unidade)
 
 def main():
     valor_real, taxa_dolar, taxa_euro = 100.00, 5.60, 6.60

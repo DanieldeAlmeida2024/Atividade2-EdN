@@ -1,10 +1,10 @@
 """Média aritmética de notas escolares."""
-import math
+from numeros import numero_finito, resultado_finito
 
 def calcular_media(notas: list[float]) -> float:
-    if not notas or any(not isinstance(n, (int, float)) or not math.isfinite(n) or not 0 <= n <= 10 for n in notas):
+    if not notas or any(not numero_finito(n) or not 0 <= n <= 10 for n in notas):
         raise ValueError("Informe notas finitas entre 0 e 10.")
-    return sum(notas) / len(notas)
+    return resultado_finito(sum(notas) / len(notas))
 
 def main():
     notas = [7.5, 8.0, 6.5]
