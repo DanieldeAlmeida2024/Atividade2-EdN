@@ -1,12 +1,12 @@
 """Calculadora interativa de salário por hora trabalhada."""
-import math
+from numeros import numero_finito, resultado_finito
 
 def calcular_salario(horas: float, valor_hora: float) -> float:
-    if not all(isinstance(x, (int, float)) and math.isfinite(x) for x in (horas, valor_hora)):
+    if not all(numero_finito(x) for x in (horas, valor_hora)):
         raise ValueError("Horas e valor por hora devem ser números finitos.")
     if horas < 0 or valor_hora < 0:
         raise ValueError("Horas e valor por hora não podem ser negativos.")
-    return horas * valor_hora
+    return resultado_finito(horas * valor_hora)
 
 def main():
     try:
