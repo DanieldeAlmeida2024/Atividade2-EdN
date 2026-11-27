@@ -29,6 +29,8 @@ Os exercícios possuem funções reutilizáveis e testes automatizados de saída
 - **Combustível:** 300 km / 25 L = 12 km/L; consumo com zero litro é inválido.
 - **Salário:** aceita horas fracionárias e rejeita números negativos ou não finitos.
 
+Se a entrada terminar antes de informar todos os valores da soma ou do salário, o script encerra com código 1 e explica o que falta. A soma também informa quando um valor fornecido não é inteiro.
+
 Para reproduzir: `python -m unittest discover -s tests -p 'test_*.py' -v`. O CI executa esses cenários em PRs e na `main`.
 
 ## Documentação

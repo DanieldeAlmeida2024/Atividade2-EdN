@@ -15,3 +15,7 @@ Versão **1.0.0**, 11/11/2026. Código analisado: `ecde9d5c162a66cb80e4581856d7d
 ## Reconciliação documental de 14/11/2026
 
 Recuperada modelagem específica de cada script e UML, com indicação explícita de que a revisão anterior é histórica. Preservados código, fixtures e testes já aprovados da main. O CI vigente, e não a matriz histórica, comprova execução.
+
+## Revisão 1.0.1 do plano vigente · 27/11/2026
+
+CT-04 passou a cobrir falhas de entrada na soma e no salário. Python 3.11.9 executou 15 testes em `cc5640d23a45282189dbfb0b7e12a7a4cb1763f8`. Os seis scripts também foram executados com os valores de exemplo.
