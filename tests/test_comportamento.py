@@ -109,6 +109,27 @@ class TestesAtividade02(unittest.TestCase):
         self.assertNotEqual(0, invalid.returncode)
         self.assertIn("Erro:", invalid.stderr)
 
+    def test_cli_soma_preserva_saida_com_inteiros(self):
+        p = subprocess.run([sys.executable, str(ROOT / "calculadoraSomaComEntradaUsuario.py")],
+                           input="-3\n8\n", capture_output=True, text=True, timeout=10)
+        self.assertEqual(0, p.returncode, p.stderr)
+        self.assertTrue(p.stdout.endswith("X = 5\n"), p.stdout)
+
+    def test_clis_incompletos_ou_invalidos_terminam_sem_traceback(self):
+        casos = (
+            ("calculadoraSomaComEntradaUsuario.py", "3\n", "X ="),
+            ("calculadoraSomaComEntradaUsuario.py", "3\nx\n", "X ="),
+            ("calciuladoraSalarioPorHora.py", "42\n40\n", "Salário calculado"),
+        )
+        for script, entrada, resultado in casos:
+            with self.subTest(script=script, entrada=entrada):
+                p = subprocess.run([sys.executable, str(ROOT / script)], input=entrada,
+                                   capture_output=True, text=True, timeout=10)
+                self.assertEqual(1, p.returncode)
+                self.assertIn("Erro:", p.stderr)
+                self.assertNotIn("Traceback", p.stderr)
+                self.assertNotIn(resultado, p.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

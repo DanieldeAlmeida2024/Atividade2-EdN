@@ -16,6 +16,8 @@ def main():
         if numero <= 0:
             raise ValueError("O número do funcionário deve ser positivo.")
         salario = calcular_salario(horas, valor_hora)
+    except EOFError:
+        raise SystemExit("Erro: entrada encerrada antes dos três dados do salário.") from None
     except ValueError as erro:
         raise SystemExit(f"Erro: {erro}")
     print(f"Número do funcionário : {numero}")
